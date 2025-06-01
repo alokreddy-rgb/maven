@@ -7,11 +7,11 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name:'MANASA'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- script: mvn clean test
+  displayName: 'Build and Run Unit tests'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
